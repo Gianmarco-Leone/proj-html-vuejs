@@ -128,3 +128,31 @@ header #countdown li {
   border: 1px solid red;
   height: 300px;
 }
+
+/* SECTION - EVENTS */
+#events .col-5 {
+  /* debug */
+  border: 1px solid black;
+  height: 200px;
+}
+
+/* SECTION - CONTACT-US */
+#contact_us {
+  background-color: #244186;
+  height: 150px;
+}
+
+#contact_us div {
+  /* debug */
+  height: 80px;
+  border: 1px solid white;
+}
+
+/* debug */
+#contact_us .text {
+  width: 150px;
+}
+
+#contact_us .insert-email {
+  width: 400px;
+}
