@@ -95,3 +95,36 @@ header #countdown li {
   height: 150px;
   border: 1px solid red;
 }
+
+/* SECTION - COURSES */
+#courses .course-card {
+  padding: 1rem;
+  /* debug */
+  height: 150px;
+  border: 1px solid black;
+}
+
+#courses .col-1 {
+  /* debug */
+  height: 300px;
+  border: 1px solid red;
+}
+
+/* SECTION - BLOG */
+#blog {
+  background-color: #f5f7fa;
+}
+
+#blog .blog-card {
+  /* debug */
+  padding: 1rem;
+  border: 1px solid black;
+  height: 150px;
+}
+
+#blog .blog-main-card {
+  /* debug */
+  padding: 1rem;
+  border: 1px solid red;
+  height: 300px;
+}
