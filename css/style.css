@@ -156,3 +156,13 @@ header #countdown li {
 #contact_us .insert-email {
   width: 400px;
 }
+
+/**********
+ FOOTER
+***********/
+footer .row .col-4 *,
+footer .row .col-2 * {
+  /* debug */
+  height: 150px;
+  border: 1px solid black;
+}
