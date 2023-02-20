@@ -1,8 +1,25 @@
+:root {
+  --orange-color: #ef6f31;
+  --lightblue-color: #6ac5f1;
+  --lightgrey-color: #f5f5f5;
+  --dark-color: #333333;
+  --white-color: #ffffff;
+  --blu-color: #1972f5;
+}
+
 /**********
  GENERICS
 ***********/
 ul {
   list-style: none;
+}
+
+.section-title {
+  margin: 0 auto;
+  /* debug */
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
 }
 
 /**********
@@ -12,7 +29,7 @@ ul {
 /* COUNTDONW */
 header #countdown {
   height: 50px;
-  background-color: #f5f5f5;
+  background-color: var(--lightgrey-color);
 }
 
 header #countdown ul {
@@ -43,7 +60,7 @@ header #countdown li {
  MAIN
 ***********/
 
-/* JUMBOTRON */
+/* JUMBOTRON - GET STARTED*/
 .jumbotron {
   background-color: #fbf9f6;
   padding: 3rem;
@@ -54,5 +71,27 @@ header #countdown li {
   /* debug */
   width: 300px;
   height: 300px;
+  border: 1px solid red;
+}
+
+/* SECTION - COACHING */
+/* debug */
+#coaching .col-2,
+#coaching .col-3,
+#coaching .col-5,
+#coaching .col-6 {
+  height: 200px;
+  border: 1px solid black;
+}
+
+/* SECTION - TESTIMONINALS */
+#testimonials {
+  background-color: #faf8f6;
+}
+
+#testimonials .row .col-4 .testimonial-card {
+  padding: 1rem;
+  /* debug */
+  height: 150px;
   border: 1px solid red;
 }
