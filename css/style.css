@@ -22,6 +22,30 @@ ul {
   border: 1px solid black;
 }
 
+.em-title {
+  display: block;
+  color: var(--lightblue-color);
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.my-primary-btn {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 35%;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 0.8rem 0;
+}
+
+.my-primary-btn:hover {
+  background-color: var(--lightblue-color);
+}
+
 /**********
  HEADER
 ***********/
@@ -44,6 +68,11 @@ header #countdown li {
 }
 
 /* NAVBAR */
+header {
+  position: relative;
+  z-index: 1;
+}
+
 .header-navbar {
   height: 80px;
   background-color: #fff;
@@ -63,15 +92,93 @@ header #countdown li {
 /* JUMBOTRON - GET STARTED*/
 .jumbotron {
   background-color: #fbf9f6;
-  padding: 3rem;
+  height: 75vh;
+  position: relative;
 }
 
 .jumbotron .jumbotron-text {
-  margin: 0 auto;
-  /* debug */
-  width: 300px;
-  height: 300px;
-  border: 1px solid red;
+  margin: auto;
+  height: 100%;
+  width: 500px;
+}
+
+.jumbotron .jumbotron-icon {
+  /* width: 30px; */
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+
+.jumbotron .jumbotron-icon i {
+  cursor: pointer;
+}
+
+/* IMAGE COORDINATES */
+.jumbotron img {
+  position: absolute;
+}
+
+/* LEFT SIDE */
+.jumbotron img.left-artist-shape-01 {
+  left: -10%;
+  top: -39%;
+}
+
+.jumbotron img.artist-hero-image-01 {
+  height: 40%;
+  bottom: 50px;
+  left: 100px;
+  z-index: 2;
+}
+
+.jumbotron img.artist-shape-03 {
+  height: 70%;
+  top: 20%;
+}
+
+.jumbotron img.artist-hero-image-02 {
+  height: 50%;
+  bottom: 250px;
+  left: 250px;
+  z-index: 1;
+}
+
+.jumbotron img.artist-hero-image-03 {
+  height: 50%;
+  bottom: 20px;
+  left: 350px;
+}
+
+/* RIGHT SIDE */
+.jumbotron img.right-artist-shape-01 {
+  height: 90%;
+  right: 160px;
+}
+
+.jumbotron img.artist-hero-04 {
+  height: 60%;
+  right: 200px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.jumbotron img.artist-shape-04 {
+  height: 40%;
+  right: 140px;
+  top: 50px;
+}
+
+.jumbotron img.artist-shape-05 {
+  height: 30%;
+  right: 140px;
+  bottom: 0;
+}
+
+.jumbotron img.maxcoach-shape-12 {
+  height: 30%;
+  right: 280px;
+  bottom: 30px;
 }
 
 /* SECTION - COACHING */
