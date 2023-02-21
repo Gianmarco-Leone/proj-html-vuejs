@@ -77,6 +77,14 @@ img {
   cursor: pointer;
 }
 
+.circle {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 8px solid #ecc5ab;
+}
+
 /**********
  HEADER
 ***********/
@@ -255,11 +263,6 @@ IMAGES COORDINATES
 }
 
 #coaching .col-7 .box-video .circle {
-  display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  border: 8px solid #ecc5ab;
   position: absolute;
   top: 60px;
   right: -50px;
@@ -381,18 +384,75 @@ IMAGES COORDINATES
   background-color: #f5f7fa;
 }
 
-#blog .blog-card {
-  /* debug */
-  padding: 1rem;
-  border: 1px solid black;
+#blog .my-col {
+  width: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+#blog .my-col:first-child {
+  margin-top: 6.5rem;
+}
+
+#blog .my-col img {
+  width: 100%;
   height: 150px;
+  object-fit: cover;
+}
+
+#blog .blog-card {
+  padding: 1rem;
+}
+
+#blog .card-text {
+  background-color: var(--white-color);
+  padding: 1.5rem 1rem;
 }
 
 #blog .blog-main-card {
-  /* debug */
   padding: 1rem;
-  border: 1px solid red;
-  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+#blog .main-card-text {
+  padding: 0 1.5rem 2.5rem;
+  color: #efefef;
+  position: absolute;
+  bottom: 0;
+}
+
+#blog .header-card-text {
+  font-size: 0.9rem;
+}
+
+#blog .footer-card-text {
+  font-size: 0.7rem;
+}
+
+#blog .text-center a {
+  text-decoration: none;
+  color: var(--orange-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* IMAGES COORDINATE */
+#blog .maxcoach-shape-03 {
+  position: absolute;
+  top: 200px;
+}
+
+#blog .maxcoach-shape-12 {
+  position: absolute;
+  top: 170px;
+  right: 53%;
+}
+
+#blog .circle {
+  position: absolute;
+  left: 200px;
+  top: 180px;
 }
 
 /* SECTION - EVENTS */
