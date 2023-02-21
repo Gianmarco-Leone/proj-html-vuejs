@@ -104,11 +104,23 @@ header {
   background-color: #fff;
 }
 
-.header-navbar * {
-  /* debug */
-  height: 50%;
-  width: 60px;
-  border: 1px solid black;
+.header-navbar .header-logo img {
+  width: 50%;
+}
+
+.header-navbar .link-list li i {
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.header-navbar .icon-list li i {
+  color: #666;
+  cursor: pointer;
+}
+
+.header-navbar .link-list li a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /**********
@@ -323,12 +335,12 @@ IMAGES COORDINATES
 }
 
 /* IMAGES COORDINATES */
-#courses .container .artist-shape-01 {
+/* #courses .container .artist-shape-01 {
   transform: rotate(250deg);
   position: absolute;
   right: -30%;
   top: 100px;
-}
+} */
 
 #courses .container .artist-shape-02 {
   width: 50%;

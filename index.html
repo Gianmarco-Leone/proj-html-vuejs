@@ -69,12 +69,25 @@
           </ul>
         </div>
         <!-- HEADER NAVBAR -->
-        <div
-          class="header-navbar container d-flex justify-content-between align-items-center"
-        >
-          <div class="header-logo"></div>
-          <ul></ul>
-          <ul></ul>
+        <div class="header-navbar container d-flex align-items-center">
+          <div class="header-logo">
+            <img :src=" './img/' + logo" alt="Logo" />
+          </div>
+          <ul class="link-list flex-grow-1 d-flex mb-0">
+            <li v-for="link in listLinks" class="my-small-text px-4">
+              <a href="#">
+                {{link}}
+                <span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <ul class="icon-list d-flex mb-0 me-0">
+            <li v-for="icon in listClassIcons" class="px-2">
+              <i :class="icon"></i>
+            </li>
+          </ul>
         </div>
       </header>
       <!-- FINE HEADER -->
