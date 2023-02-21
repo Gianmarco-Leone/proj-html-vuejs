@@ -14,25 +14,27 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .section-title {
   margin: 0 auto;
   /* debug */
-  width: 300px;
-  height: 100px;
-  border: 1px solid black;
+  width: 500px;
+  /* height: 100px; */
+  /* border: 1px solid black; */
 }
 
 .em-title {
   display: block;
   color: var(--lightblue-color);
   font-family: "Dancing Script", cursive;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
 }
 
-.my-primary-btn {
-  background-color: var(--orange-color);
-  color: var(--white-color);
+.my-btn {
   font-weight: bold;
   font-size: 0.8rem;
   width: 35%;
@@ -42,8 +44,23 @@ ul {
   padding: 0.8rem 0;
 }
 
+.my-primary-btn {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+
+.my-outlined-btn {
+  color: var(--orange-color);
+  background-color: #fdf1eb;
+}
+
 .my-primary-btn:hover {
   background-color: var(--lightblue-color);
+}
+
+.my-outlined-btn:hover {
+  background-color: var(--orange-color);
+  color: var(--white-color);
 }
 
 /**********
@@ -100,6 +117,7 @@ header {
   margin: auto;
   height: 100%;
   width: 500px;
+  z-index: 4;
 }
 
 .jumbotron .jumbotron-icon {
@@ -114,7 +132,9 @@ header {
   cursor: pointer;
 }
 
-/* IMAGE COORDINATES */
+/*****************
+IMAGES COORDINATES
+******************/
 .jumbotron img {
   position: absolute;
 }
@@ -182,13 +202,42 @@ header {
 }
 
 /* SECTION - COACHING */
-/* debug */
-#coaching .col-2,
-#coaching .col-3,
-#coaching .col-5,
-#coaching .col-6 {
-  height: 200px;
-  border: 1px solid black;
+#coaching .row .col-2 .col-text p {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+#coaching .row .col-2 img {
+  width: 50%;
+}
+
+#coaching .col-4 .em-title {
+  transform: rotate(5deg);
+}
+
+#coaching .col-7 .box-video {
+  position: relative;
+  z-index: 10;
+}
+
+#coaching .col-7 .box-video .icon-yt-play {
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#coaching .col-7 .box-video .circle {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 8px solid #ecc5ab;
+  position: absolute;
+  top: 60px;
+  right: -50px;
 }
 
 /* SECTION - TESTIMONINALS */
