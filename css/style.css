@@ -287,17 +287,55 @@ IMAGES COORDINATES
 }
 
 /* SECTION - COURSES */
-#courses .course-card {
-  padding: 1rem;
-  /* debug */
-  height: 150px;
-  border: 1px solid black;
+#courses .container {
+  position: relative;
 }
 
-#courses .col-1 {
-  /* debug */
-  height: 300px;
-  border: 1px solid red;
+#courses .course-card {
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+#courses .course-card:hover .course-card-text {
+  border: 2px solid var(--orange-color);
+  background-color: var(--white-color);
+  position: absolute;
+  bottom: -25%;
+}
+
+#courses .course-card .course-card-text .course-price {
+  color: var(--orange-color);
+}
+
+#courses .flex-column .vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 8rem;
+  margin-top: 5rem;
+  color: #fff;
+  text-shadow: -1px 0 #ddd, 0 1px #ddd, 1px 0 #ddd, 0 -1px #ddd;
+}
+
+#courses .my-btn {
+  width: 15%;
+}
+
+/* IMAGES COORDINATES */
+#courses .container .artist-shape-01 {
+  transform: rotate(250deg);
+  position: absolute;
+  right: -30%;
+  top: 100px;
+}
+
+#courses .container .artist-shape-02 {
+  width: 50%;
+  position: absolute;
+  left: -20%;
+  bottom: 15%;
+  transform: rotate(-35deg);
 }
 
 /* SECTION - BLOG */
