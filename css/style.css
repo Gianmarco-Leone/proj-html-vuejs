@@ -85,6 +85,16 @@ img {
   border: 8px solid #ecc5ab;
 }
 
+.flex-column .vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 8rem;
+  margin-top: 5rem;
+  color: #fff;
+  text-shadow: -1px 0 var(--orange-color), 0 1px var(--orange-color),
+    1px 0 var(--orange-color), 0 -1px var(--orange-color);
+}
+
 /**********
  HEADER
 ***********/
@@ -349,16 +359,6 @@ IMAGES COORDINATES
   color: var(--orange-color);
 }
 
-#courses .flex-column .vertical-text {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 8rem;
-  margin-top: 5rem;
-  color: #fff;
-  text-shadow: -1px 0 var(--orange-color), 0 1px var(--orange-color),
-    1px 0 var(--orange-color), 0 -1px var(--orange-color);
-}
-
 #courses .my-btn {
   width: 15%;
 }
@@ -456,10 +456,32 @@ IMAGES COORDINATES
 }
 
 /* SECTION - EVENTS */
-#events .col-5 {
-  /* debug */
-  border: 1px solid black;
-  height: 200px;
+#events .col-5 .events-card {
+  height: 250px;
+}
+
+#events .col-5 .my-small-text.fw-light {
+  font-size: 0.7rem;
+}
+
+/* IMAGE COORDINATE */
+#events .vertical-text {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+}
+
+#events .artist-shape-01 {
+  position: absolute;
+  bottom: -250px;
+  left: -500px;
+  transform: rotate(-150deg);
+}
+
+#events .maxcoach-shape-13 {
+  position: absolute;
+  right: 0;
+  top: 100px;
 }
 
 /* SECTION - CONTACT-US */
