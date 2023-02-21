@@ -140,7 +140,7 @@
         <!-- FINE JUMBOTRON -->
 
         <!-- INIZIO SECTION COACHING -->
-        <section id="coaching" class="my-3">
+        <section id="coaching" class="position-relative my-3">
           <div class="container">
             <div class="section-title">
               <span class="em-title fs-1">Artist coaching</span>
@@ -161,6 +161,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="col-2 mt-5">
                 <div class="col-image">
                   <img src="./img/artist-box-image-02.png" />
@@ -173,6 +174,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="col-2">
                 <div class="col-image">
                   <img src="./img/artist-box-image-03.png" />
@@ -185,6 +187,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="col-2 mt-5">
                 <div class="col-image">
                   <img src="./img/artist-box-image-04.png" />
@@ -197,6 +200,18 @@
                   </p>
                 </div>
               </div>
+
+              <!-- IMMAGINI SOVRAPPOSTE -->
+              <img
+                src="./img/maxcoach-shape-14.png"
+                class="maxcoach-shape-14"
+              />
+              <img src="./img/artist-shape-01.png" class="artist-shape-01" />
+              <img
+                src="./img/maxcoach-shape-13.png"
+                class="maxcoach-shape-13"
+              />
+              <!-- FINE IMMAGINI SOVRAPPOSTE -->
             </div>
             <div class="row justify-content-center gx-5">
               <div class="col-4 text-center">
@@ -603,22 +618,73 @@
       <!-- FINE MAIN -->
 
       <!-- INIZIO FOOTER -->
-      <footer class="my-5">
+      <footer class="mt-5">
         <div class="container">
           <div class="row">
             <div class="col-4">
-              <div></div>
+              <h4 class="fs-6">{{footerSections[0].title}}</h4>
+              <ul class="ps-0">
+                <li
+                  v-for="specification in footerSections[0].specifications"
+                  class="my-small-text py-1"
+                >
+                  {{specification}}
+                </li>
+              </ul>
+              <ul class="icon-list d-flex mb-0 me-0 ps-0">
+                <li v-for="icon in footerSections[0].listIcons" class="me-3">
+                  <i :class="icon"></i>
+                </li>
+              </ul>
             </div>
             <div class="col-2">
-              <ul></ul>
+              <h4 class="fs-6">{{footerSections[1].title}}</h4>
+              <ul class="ps-0">
+                <li
+                  v-for="link in footerSections[1].links"
+                  class="my-small-text py-1"
+                >
+                  <a href="#"> {{link}} </a>
+                </li>
+              </ul>
             </div>
             <div class="col-2">
-              <ul></ul>
+              <h4 class="fs-6">{{footerSections[2].title}}</h4>
+              <ul class="ps-0">
+                <li
+                  v-for="link in footerSections[2].links"
+                  class="my-small-text py-1"
+                >
+                  <a href="#"> {{link}} </a>
+                </li>
+              </ul>
             </div>
             <div class="col-4">
-              <div></div>
+              <h4 class="fs-6 d-inline-block me-2">
+                {{footerSections[3].title}}
+              </h4>
+              <a href="#" class="my-small-text"> {{footerSections[3].link}} </a>
+              <div class="row my-3">
+                <div v-for="image in footerSections[3].images" class="col-4">
+                  <figure>
+                    <img :src=" './img/' + image" alt="Social image" />
+                  </figure>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="copyright-text text-center my-5">
+            <span class="my-small-text"> &copy; {{footerSections[4]}} </span>
+          </div>
+        </div>
+        <div class="footer-button d-flex justify-content-end">
+          <span
+            class="d-flex justify-content-center align-items-center footer-arrow m-3"
+          >
+            <a href="#">
+              <i class="fa-solid fa-arrow-up"></i>
+            </a>
+          </span>
         </div>
       </footer>
       <!-- FINE FOOTER -->

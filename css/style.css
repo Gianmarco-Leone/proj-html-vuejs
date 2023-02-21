@@ -72,6 +72,11 @@ img {
   color: #666;
 }
 
+.icon-list i {
+  color: #666;
+  cursor: pointer;
+}
+
 /**********
  HEADER
 ***********/
@@ -110,11 +115,6 @@ header {
 
 .header-navbar .link-list li i {
   font-size: 0.5rem;
-  cursor: pointer;
-}
-
-.header-navbar .icon-list li i {
-  color: #666;
   cursor: pointer;
 }
 
@@ -223,6 +223,10 @@ IMAGES COORDINATES
 }
 
 /* SECTION - COACHING */
+#coaching .col-2 {
+  position: relative;
+  z-index: 1;
+}
 #coaching .row .col-2 .col-text p {
   font-size: 0.8rem;
   padding-top: 1rem;
@@ -259,6 +263,27 @@ IMAGES COORDINATES
   position: absolute;
   top: 60px;
   right: -50px;
+}
+
+/* IMAGES COORDINATE */
+#coaching .maxcoach-shape-14 {
+  position: absolute;
+  top: 100px;
+}
+
+#coaching .artist-shape-01 {
+  width: 35%;
+  position: absolute;
+  left: -100px;
+  top: 25px;
+  transform: rotate(-120deg);
+}
+
+#coaching .maxcoach-shape-13 {
+  width: 150px;
+  position: absolute;
+  right: -40px;
+  top: 150px;
 }
 
 /* SECTION - TESTIMONINALS */
@@ -327,7 +352,8 @@ IMAGES COORDINATES
   font-size: 8rem;
   margin-top: 5rem;
   color: #fff;
-  text-shadow: -1px 0 #ddd, 0 1px #ddd, 1px 0 #ddd, 0 -1px #ddd;
+  text-shadow: -1px 0 var(--orange-color), 0 1px var(--orange-color),
+    1px 0 var(--orange-color), 0 -1px var(--orange-color);
 }
 
 #courses .my-btn {
@@ -400,9 +426,38 @@ IMAGES COORDINATES
 /**********
  FOOTER
 ***********/
-footer .row .col-4 *,
-footer .row .col-2 * {
-  /* debug */
-  height: 150px;
-  border: 1px solid black;
+footer .icon-list i {
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+footer ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: var(--orange-color);
+}
+
+footer .col-4 a {
+  color: var(--orange-color);
+  text-decoration: none;
+}
+
+footer .copyright-text .my-small-text {
+  color: #999;
+  font-size: 0.6rem;
+}
+
+footer .footer-arrow {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--orange-color);
+}
+
+footer .footer-arrow a {
+  color: var(--white-color);
 }
