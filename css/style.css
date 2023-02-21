@@ -487,22 +487,51 @@ IMAGES COORDINATES
 /* SECTION - CONTACT-US */
 #contact_us {
   background-color: #244186;
-  height: 150px;
+  height: 160px;
 }
 
-#contact_us div {
-  /* debug */
-  height: 80px;
-  border: 1px solid white;
+#contact_us .col-4 input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
 }
 
-/* debug */
-#contact_us .text {
-  width: 150px;
+#contact_us .col-4 i {
+  color: var(--lightgrey-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1rem;
 }
 
-#contact_us .insert-email {
-  width: 400px;
+/* IMAGES COORDINATE */
+#contact_us .artist-shape-left {
+  width: 283px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#contact_us .artist-shape-right {
+  width: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Cambiare colore al placeholder */
+#contact_us input[placeholder] {
+  color: var(--lightgrey-color);
+}
+
+/* Per browser Safari, Chrome */
+::-webkit-input-placeholder {
+  color: var(--lightgrey-color);
+}
+
+/* Per browser Firefox */
+::-moz-placeholder {
+  color: var(--lightgrey-color);
+  opacity: 1;
 }
 
 /**********
