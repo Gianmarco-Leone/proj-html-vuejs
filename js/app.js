@@ -68,54 +68,77 @@ const app = Vue.createApp({
         },
         "2020 Maxcoach. All Rights Reserved",
       ],
+      // Valori countdown header
       remainingDays: "00",
       remainingHours: "00",
       remainingMinutes: "00",
       remainingSeconds: "00",
     };
   },
+  computed: {
+    // Ritorno i valori in formato normale e non in millisecondi
+    formatSeconds: () => 1000,
+    formatMinutes() {
+      return this.formatSeconds * 60;
+    },
+    formatHours() {
+      return this.formatMinutes * 60;
+    },
+    formatDays() {
+      return this.formatHours * 24;
+    },
+  },
+  methods: {
+    // Funzione che crea il countdown
+    showRemaining() {
+      const timer = setInterval(() => {
+        // Recupero momento attuale
+        const now = new Date().getTime();
+
+        // Fisso data scadenza countdown
+        const end = new Date("Feb 22, 2023 18:00:00").getTime();
+
+        // Creo distanza tra data scadenza e momento attuale
+        const distance = end - now;
+
+        // Se la distanza si azzera annullo countdown
+        if (distance < 0) {
+          clearInterval(timer);
+          return;
+        }
+
+        // Calcolo giorni
+        const days = Math.floor(distance / this.formatDays);
+
+        // Calcolo ore
+        const hours = Math.floor(
+          (distance % this.formatDays) / this.formatHours
+        );
+
+        // Calcolo minuti
+        const minutes = Math.floor(
+          (distance % this.formatHours) / this.formatMinutes
+        );
+
+        // Calcolo secondi
+        const seconds = Math.floor(
+          (distance % this.formatMinutes) / this.formatSeconds
+        );
+
+        // Condizioni per stmpare sempre i valori con due cifre
+        this.remainingSeconds = seconds < 10 ? "0" + seconds : seconds;
+
+        this.remainingMinutes = minutes < 10 ? "0" + minutes : minutes;
+
+        this.remainingHours = hours < 10 ? "0" + hours : hours;
+
+        this.remainingDays = days < 10 ? "0" + days : days;
+      }, 1000);
+    },
+  },
   mounted() {
-    // Imposto data scadenza countdown
-    const countDownDate = new Date("Feb 22, 2023 18:00:00").getTime();
-
-    // Aggiorno countdown ogni secondo
-    let countDownTime = setInterval(function () {
-      // Recupero momento attuale
-      let now = new Date().getTime();
-
-      // Dichiaro distanza tra momento attuale e scadenza countdown
-      let remainingTime = countDownDate - now;
-
-      // Calcolo giorni rimanenti
-      let calculatedDays = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      // console.log(calculatedDays);
-
-      // Calcolo ore rimanenti
-      let calculatedHours = Math.floor(
-        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      // console.log(calculatedHours);
-
-      // Calcolo minuti rimanenti
-      let calculatedMinutes = Math.floor(
-        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      // console.log(calculatedMinutes);
-
-      // Calcolo secondi rimanenti
-      let calculatedSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-      // console.log(calculatedSeconds);
-
-      // Se il countdown arriva a zero
-      if (remainingTime <= 0) {
-        // Blocco countdown
-
-        clearInterval(countDownTime);
-        // Setto i valori a 0
-      }
-    }, 1000);
-
-    //   this.seconds = seconds < 10 ? "0" + seconds :
+    // Richiamo funzione che genera il countdown al caricamento della pagina
+    this.showRemaining();
   },
 });
 
