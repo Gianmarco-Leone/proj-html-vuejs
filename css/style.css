@@ -265,7 +265,7 @@ IMAGES COORDINATES
 
 #coaching .col-7 .box-video {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 #coaching .col-7 .box-video .icon-yt-play {
@@ -283,7 +283,7 @@ IMAGES COORDINATES
   right: -50px;
 }
 
-/* IMAGES COORDINATE */
+/* IMAGES COORDINATES */
 #coaching .maxcoach-shape-14 {
   position: absolute;
   top: 100px;
@@ -300,8 +300,21 @@ IMAGES COORDINATES
 #coaching .maxcoach-shape-13 {
   width: 150px;
   position: absolute;
-  right: -40px;
+  right: 0;
   top: 150px;
+}
+
+#coaching .maxcoach-shape-05 {
+  position: absolute;
+  top: -25px;
+  left: -10px;
+}
+
+#coaching .maxcoach-shape-12 {
+  width: 150px;
+  position: absolute;
+  bottom: -25px;
+  right: -100px;
 }
 
 /* SECTION - TESTIMONINALS */
@@ -369,13 +382,6 @@ IMAGES COORDINATES
 }
 
 /* IMAGES COORDINATES */
-/* #courses .container .artist-shape-01 {
-  transform: rotate(250deg);
-  position: absolute;
-  right: -30%;
-  top: 100px;
-} */
-
 #courses .container .artist-shape-02 {
   width: 50%;
   position: absolute;
@@ -418,6 +424,10 @@ IMAGES COORDINATES
   padding: 1rem;
   position: relative;
   z-index: 1;
+}
+
+#blog .blog-main-card img {
+  filter: brightness(80%);
 }
 
 #blog .main-card-text {
