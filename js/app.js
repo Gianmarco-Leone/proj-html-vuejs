@@ -1,6 +1,20 @@
 const app = Vue.createApp({
   data() {
     return {
+      countdownBar: [
+        {
+          text: "Starts TOMORROW! Our biggest event of the year...",
+          class: "my-small-text",
+        },
+        {
+          classIcon: "fa-regular fa-clock",
+          class: "ms-3",
+        },
+        {
+          text: "Get ticket",
+          class: "my-btn my-primary-btn",
+        },
+      ],
       logo: "dark-logo.png",
       listLinks: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
       listClassIcons: [
@@ -54,7 +68,53 @@ const app = Vue.createApp({
         },
         "2020 Maxcoach. All Rights Reserved",
       ],
+      remainingDays: "00",
+      remainingHours: "00",
+      remainingMinutes: "00",
+      remainingSeconds: "00",
     };
+  },
+  mounted() {
+    // Imposto data scadenza countdown
+    const countDownDate = new Date("Feb 22, 2023 18:00:00").getTime();
+
+    // Aggiorno countdown ogni secondo
+    let countDownTime = setInterval(function () {
+      // Recupero momento attuale
+      let now = new Date().getTime();
+
+      // Dichiaro distanza tra momento attuale e scadenza countdown
+      let remainingTime = countDownDate - now;
+
+      // Calcolo giorni rimanenti
+      let calculatedDays = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      console.log(calculatedDays);
+
+      // Calcolo ore rimanenti
+      let calculatedHours = Math.floor(
+        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      console.log(calculatedHours);
+
+      // Calcolo minuti rimanenti
+      let calculatedMinutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      console.log(calculatedMinutes);
+
+      // Calcolo secondi rimanenti
+      let calculatedSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+      console.log(calculatedSeconds);
+
+      // Se il countdown arriva a zero
+      if (remainingTime <= 0) {
+        // Blocco countdown
+        clearInterval(countDownTime);
+        // Setto i valori a 0
+      }
+    }, 1000);
+
+    //   this.seconds = seconds < 10 ? "0" + seconds :
   },
 });
 

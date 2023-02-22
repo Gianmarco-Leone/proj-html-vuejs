@@ -62,11 +62,27 @@
       <header>
         <!-- COUNTDONW -->
         <div id="countdown">
-          <ul class="d-flex justify-content-center align-items-center">
-            <li></li>
-            <li class="mx-4"></li>
-            <li></li>
-          </ul>
+          <div class="d-flex align-items-center">
+            <div class="col-7 text-end">
+              <span :class="countdownBar[0].class">
+                {{countdownBar[0].text}}
+              </span>
+
+              <span :class="countdownBar[1].class">
+                <i :class="countdownBar[1].classIcon" class="pe-2"></i>
+                <span>
+                  {{remainingDays}} : {{remainingHours}} : {{remainingMinutes}}
+                  : {{remainingSeconds}}
+                </span>
+              </span>
+            </div>
+
+            <div class="col-5">
+              <button type="button" :class="countdownBar[2].class">
+                {{countdownBar[2].text}}
+              </button>
+            </div>
+          </div>
         </div>
         <!-- HEADER NAVBAR -->
         <div class="header-navbar container d-flex align-items-center">
