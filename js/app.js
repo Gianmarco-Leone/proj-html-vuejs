@@ -88,27 +88,28 @@ const app = Vue.createApp({
 
       // Calcolo giorni rimanenti
       let calculatedDays = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      console.log(calculatedDays);
+      // console.log(calculatedDays);
 
       // Calcolo ore rimanenti
       let calculatedHours = Math.floor(
         (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      console.log(calculatedHours);
+      // console.log(calculatedHours);
 
       // Calcolo minuti rimanenti
       let calculatedMinutes = Math.floor(
         (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
       );
-      console.log(calculatedMinutes);
+      // console.log(calculatedMinutes);
 
       // Calcolo secondi rimanenti
       let calculatedSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-      console.log(calculatedSeconds);
+      // console.log(calculatedSeconds);
 
       // Se il countdown arriva a zero
       if (remainingTime <= 0) {
         // Blocco countdown
+
         clearInterval(countDownTime);
         // Setto i valori a 0
       }

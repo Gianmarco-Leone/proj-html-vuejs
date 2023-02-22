@@ -413,6 +413,7 @@ IMAGES COORDINATES
 
 #blog .blog-card {
   padding: 1rem;
+  cursor: pointer;
 }
 
 #blog .card-text {
@@ -424,6 +425,7 @@ IMAGES COORDINATES
   padding: 1rem;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 #blog .blog-main-card img {
